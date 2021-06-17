@@ -2,7 +2,7 @@
 kind: ConfigMap 
 apiVersion: v1 
 metadata:
-  name: trino-configs
+  name: trino-configs-2
 data:
   jvm.config: |-
     -server
@@ -27,7 +27,7 @@ data:
     query.max-stage-count=200
     task.writer-count=4
     discovery-server.enabled=true
-    discovery.uri=http://trino:8080
+    discovery.uri=http://trino-1:8080
   config.properties.worker: |-
     coordinator=false
     http-server.http.port=8080
@@ -36,31 +36,31 @@ data:
     query.max-total-memory-per-node=10GB
     query.max-stage-count=200
     task.writer-count=4
-    discovery.uri=http://trino:8080
+    discovery.uri=http://trino-1:8080
   node.properties: |-
     node.environment=test
     spiller-spill-path=/tmp
     max-spill-per-node=4TB
     query-max-spill-per-node=1TB
-  hive.properties: |-
-    connector.name=hive-hadoop2
-    hive.metastore.uri=thrift://metastore:9083
-    hive.allow-drop-table=true
-    hive.max-partitions-per-scan=1000000
-    hive.s3.endpoint=10.62.64.200
-    hive.s3.path-style-access=true
-    hive.s3.ssl.enabled=false
-    hive.s3.max-connections=100
-  iceberg.properties: |-
-    connector.name=iceberg
-    hive.metastore.uri=thrift://metastore:9083
-    hive.max-partitions-per-scan=1000000
-    hive.s3.endpoint=10.62.64.200
-    hive.s3.path-style-access=true
-    hive.s3.ssl.enabled=false
-    hive.s3.max-connections=100
+  # hive.properties: |-
+  #   connector.name=hive-hadoop2
+  #   hive.metastore.uri=thrift://metastore:9083
+  #   hive.allow-drop-table=true
+  #   hive.max-partitions-per-scan=1000000
+  #   hive.s3.endpoint=10.62.64.200
+  #   hive.s3.path-style-access=true
+  #   hive.s3.ssl.enabled=false
+  #   hive.s3.max-connections=100
+  # iceberg.properties: |-
+  #   connector.name=iceberg
+  #   hive.metastore.uri=thrift://metastore:9083
+  #   hive.max-partitions-per-scan=1000000
+  #   hive.s3.endpoint=10.62.64.200
+  #   hive.s3.path-style-access=true
+  #   hive.s3.ssl.enabled=false
+  #   hive.s3.max-connections=100
   mysql.properties: |-
     connector.name=mysql
-    connection-url=jdbc:mysql://metastore-db.default.svc.cluster.local:13306
-    connection-user=root
-    connection-password=mypass
+    connection-url=jdbc:mysql://mariadb:3306
+    connection-user=tester
+    connection-password=goodPass$123

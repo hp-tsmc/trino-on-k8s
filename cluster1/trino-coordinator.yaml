@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trino-coordinator-1
+spec:
+  selector:
+    matchLabels:
+      app: trino-coordinator-1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: trino-coordinator-1
+    spec:
+      containers:
+      - name: trino
+        image: trinodb/trino:358
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: trino-cfg-vol
+          mountPath: /etc/trino/jvm.config
+          subPath: jvm.config
+        - name: trino-cfg-vol
+          mountPath: /etc/trino/config.properties
+          subPath: config.properties.coordinator
+        - name: trino-cfg-vol
+          mountPath: /etc/trino/node.properties
+          subPath: node.properties
+        - name: trino-cfg-vol
+          mountPath: /etc/trino/catalog/mysql.properties
+          subPath: mysql.properties
+        resources:
+          requests:
+            memory: "1G"
+            cpu: 500m
+          limits:
+            memory: "1G"
+            cpu: 500m
+        imagePullPolicy: Always
+      volumes:
+        - name: trino-cfg-vol
+          configMap:
+            name: trino-configs-1
+
+
