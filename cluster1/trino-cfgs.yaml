@@ -17,6 +17,8 @@ data:
     -XX:ReservedCodeCacheSize=512M
     -Djdk.attach.allowAttachSelf=true
     -Djdk.nio.maxCachedBufferSize=2000000
+    -Djava.rmi.server.hostname=trino-1
+    -Dcom.sun.management.jmxremote.rmi.port=9081
   config.properties.coordinator: |-
     coordinator=true
     node-scheduler.include-coordinator=false
@@ -28,6 +30,8 @@ data:
     task.writer-count=4
     discovery-server.enabled=true
     discovery.uri=http://trino-1:8080
+    jmx.rmiregistry.port=9080
+    jmx.rmiserver.port=9081
   config.properties.worker: |-
     coordinator=false
     http-server.http.port=8080
@@ -37,6 +41,8 @@ data:
     query.max-stage-count=200
     task.writer-count=4
     discovery.uri=http://trino-1:8080
+    jmx.rmiregistry.port=9080
+    jmx.rmiserver.port=9081
   node.properties: |-
     node.environment=test
     spiller-spill-path=/tmp

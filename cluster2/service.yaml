@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: trino-2
 spec:
+  type: NodePort
   ports:
   - port: 8080
   selector:

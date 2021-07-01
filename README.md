@@ -45,3 +45,14 @@ Trino CLI pod
 
 Create SQL shell as:
 ```kubectl exec -it pod/trino-cli -- trino --server trino:8080 --catalog hive --schema default```
+
+Create Nginx configmap from file
+```
+mk create configmap nginx-config --from-file=nginx/config/nginx.conf
+mk delete configmap nginx-config
+```
+
+Query
+```
+curl -vvv -X POST -u admin: -H "X-Trino-User=admin" nginx-trino:5566/v1/statement -d"SELECT '1' AS CNT"
+```

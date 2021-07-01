@@ -3,7 +3,16 @@ kind: Service
 metadata:
   name: trino-1
 spec:
+  type: NodePort
   ports:
   - port: 8080
+    name: presto
+    targetPort: 8080
+  - port: 9080
+    name: jmx-registry
+    targetPort: 9080
+  - port: 9081
+    name: jmx-server
+    targetPort: 9081
   selector:
     app: trino-coordinator-1
