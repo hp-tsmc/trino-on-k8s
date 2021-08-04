@@ -56,3 +56,4 @@ Query
 ```
 curl -vvv -X POST -u admin: -H "X-Trino-User=admin" nginx-trino:5566/v1/statement -d"SELECT '1' AS CNT"
 ```
+

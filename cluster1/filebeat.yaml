@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-filebeat-config
+  labels:
+    k8s-app: filebeat
+data:
+  filebeat.yml: |-
+    filebeat.inputs:
+    - type: log
+      paths:
+        - /var/log/trino/*.log
+      tail_files: true
+      fields:
+        pod_name: '${pod_name}'
+        POD_IP: '${POD_IP}'
+      json.keys_under_root: true
+      json.add_error_key: true
+      expand_keys: true
+    processors:
+      - decode_json_fields:
+          fields: ["message.metadata"]
+    setup.template.name: "app-logs"
+    setup.template.pattern: "app-logs-*"
+    output.elasticsearch: # 日誌輸出到ES
+      hosts: ["elasticsearch:9200"]
+      index: "app-logs-%{+yyyy.MM}"
