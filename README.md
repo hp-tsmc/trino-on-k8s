@@ -22,19 +22,6 @@ Things you may need to modify:
 * StorageClass for the MariaDB volume.
 * Memory settings and worker counts.
 
-# Hive Metastore Service
-
-Dockerfile for Metastore
- * Uses [Hive Metastore Standalone service](https://cwiki.apache.org/confluence/display/Hive/AdminManual+Metastore+3.0+Administration).
-
-Yaml for MariaDB
- * Simple and not optimized.
-
-Yaml for init-schemas
- * One-time K8s job to initiate the MariaDB tables.
-
-Yaml for Metastore service
-
 # Trino Coordinator/Workers/CLI
 
 Leverages the official [Trino Docker image](https://github.com/trinodb/docker-images).
@@ -57,3 +44,6 @@ Query
 curl -vvv -X POST -u admin: -H "X-Trino-User=admin" nginx-trino:5566/v1/statement -d"SELECT '1' AS CNT"
 ```
 
+# Elasticsearch Index Problem
+
+[Can't get text on a START_OBJECT](https://stackoverflow.com/questions/41873672/updating-a-field-with-a-nested-array-in-elastic-search)
