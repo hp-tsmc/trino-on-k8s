@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.github.trino.querylog","l":"QueryLogListener"},{"p":"com.github.trino.querylog","l":"QueryLogListenerFactory"},{"p":"com.github.trino.querylog","l":"QueryLogPlugin"}]

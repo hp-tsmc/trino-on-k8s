@@ -1,0 +1,61 @@
+/usr/lib/jvm/default-java/bin/javadoc
+@options
+@packages
+-classpath
+'/home/pingpon/.m2/repository/io/trino/trino-spi/351/trino-spi-351.jar:/home/pingpon/.m2/repository/io/airlift/slice/0.39/slice-0.39.jar:/home/pingpon/.m2/repository/org/openjdk/jol/jol-core/0.2/jol-core-0.2.jar:/home/pingpon/.m2/repository/org/apache/logging/log4j/log4j-core/2.14.0/log4j-core-2.14.0.jar:/home/pingpon/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.0/log4j-api-2.14.0.jar:/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5/jackson-databind-2.10.5.jar:/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar:/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/home/pingpon/trino-querylog/src/main/java:/home/pingpon/trino-querylog/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/pingpon/trino-querylog/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Trino Query Log 0.4.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/pingpon/trino-querylog/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Trino Query Log 0.4.0-SNAPSHOT API'
+com.github.trino.querylog
+com.github.trino.querylog
+com.github.trino.querylog
+/home/pingpon/.m2/repository/io/trino/trino-spi/351/trino-spi-351.jar = 1626939046712
+/home/pingpon/.m2/repository/io/airlift/slice/0.39/slice-0.39.jar = 1626939047080
+/home/pingpon/.m2/repository/org/openjdk/jol/jol-core/0.2/jol-core-0.2.jar = 1626939047132
+/home/pingpon/.m2/repository/org/apache/logging/log4j/log4j-core/2.14.0/log4j-core-2.14.0.jar = 1626939047964
+/home/pingpon/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.0/log4j-api-2.14.0.jar = 1626939047376
+/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5/jackson-databind-2.10.5.jar = 1626939047224
+/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar = 1626939047740
+/home/pingpon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar = 1626939047512
+/home/pingpon/trino-querylog/src/main/java = 1628082514434
+/home/pingpon/trino-querylog/target/generated-sources/annotations = 1628082718481
+/home/pingpon/trino-querylog/target/apidocs/type-search-index.zip = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/type-search-index.js = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/package-search-index.js = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/member-search-index.zip = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/allclasses-index.html = 1628082723249
+/home/pingpon/trino-querylog/target/apidocs/index-all.html = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/index.html = 1628082723253
+/home/pingpon/trino-querylog/target/apidocs/allpackages-index.html = 1628082723249
+/home/pingpon/trino-querylog/target/apidocs/stylesheet.css = 1628082723257
+/home/pingpon/trino-querylog/target/apidocs/deprecated-list.html = 1628082723249
+/home/pingpon/trino-querylog/target/apidocs/member-search-index.js = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/package-search-index.zip = 1628082723241
+/home/pingpon/trino-querylog/target/apidocs/constant-values.html = 1628082723217
+/home/pingpon/trino-querylog/target/apidocs/help-doc.html = 1628082723257
+/home/pingpon/trino-querylog/target/apidocs/script.js = 1628082723257
+/home/pingpon/trino-querylog/target/apidocs/search.js = 1628082723257
+/home/pingpon/trino-querylog/target/apidocs/allclasses.html = 1628082723253
+/home/pingpon/trino-querylog/target/apidocs/element-list = 1628082723205
+/home/pingpon/trino-querylog/target/apidocs/overview-tree.html = 1628082723233

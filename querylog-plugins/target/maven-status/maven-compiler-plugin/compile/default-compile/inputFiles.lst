@@ -1,0 +1,3 @@
+/home/pingpon/trino-querylog/src/main/java/com/github/trino/querylog/QueryLogPlugin.java
+/home/pingpon/trino-querylog/src/main/java/com/github/trino/querylog/QueryLogListenerFactory.java
+/home/pingpon/trino-querylog/src/main/java/com/github/trino/querylog/QueryLogListener.java
