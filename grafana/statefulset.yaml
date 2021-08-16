@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: grafana
+spec:
+  serviceName: grafana 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      containers:
+      - name: grafana
+        image: grafana/grafana:8.0.4
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - name: grafana-data
+          mountPath: /tmp
+        resources:
+          requests:
+            memory: "1G"
+            cpu: "1"
+          limits:
+            memory: "1G"
+            cpu: "1"
+        imagePullPolicy: IfNotPresent
+  volumeClaimTemplates:
+  - metadata:
+      name: grafana-data
+    spec:
+      storageClassName: microk8s-hostpath
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
