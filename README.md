@@ -47,3 +47,14 @@ curl -vvv -X POST -u admin: -H "X-Trino-User=admin" nginx-trino:5566/v1/statemen
 # Elasticsearch Index Problem
 
 [Can't get text on a START_OBJECT](https://stackoverflow.com/questions/41873672/updating-a-field-with-a-nested-array-in-elastic-search)
+
+# Grafana
+
+- Setup SMTP in grafana.ini
+- Setup plugin with correct access right
+
+```
+chown 1000:0 -R
+chmod 644 -R marcusolsson-json-datasource-1.2.1/
+chmod 755 -R marcusolsson-json-datasource-1.2.1/marcusolsson-json-datasource-1.2.1/img
+```
